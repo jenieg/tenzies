@@ -1,6 +1,13 @@
 import Dice from "./Dice";
 
 const Game = () => {
+
+    function rollNewDice(){
+        return Array(10)
+            .fill()
+            .map(() => Math.ceil(Math.random() * 6));
+    }
+
     return (
         <main className="h-screen w-screen flex items-center justify-center bg-gray-900">
             <div className="h-[90vh] w-[90vw] max-w-screen-sm rounded-xl bg-gray-100">
