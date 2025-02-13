@@ -1,6 +1,9 @@
+import React from "react";
 import Dice from "./Dice";
 
 const Game = () => {
+
+    const [dice, SetDice] = React.useState(rollNewDice)
 
     function rollNewDice(){
         return Array(10)
@@ -14,16 +17,10 @@ const Game = () => {
 
                 <div className="flex justify-center mt-6">
                     <section className="grid grid-cols-5 gap-4 w-9/12 max-w-screen-sm">
-                        <Dice value={1} />
-                        <Dice value={1} />
-                        <Dice value={1} />
-                        <Dice value={1} />
-                        <Dice value={1} />
-                        <Dice value={1} />
-                        <Dice value={1} />
-                        <Dice value={1} />
-                        <Dice value={1} />
-                        <Dice value={1} />
+                        {dice.map((value, index)=> (
+                            <Dice value={value} key={index} />
+                        ))}
+                        
                     </section>
                 </div>
                 
