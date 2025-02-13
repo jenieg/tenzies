@@ -1,9 +1,9 @@
-import React from "react";
+import { useState } from "react";
 import Dice from "./Dice";
 
 const Game = () => {
 
-    const [dice, SetDice] = React.useState(rollNewDice)
+    const [dice, SetDice] = useState(rollNewDice)
 
     function rollNewDice(){
         return Array(10)
