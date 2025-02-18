@@ -10,7 +10,7 @@ const Game = () => {
             .map(() => Math.ceil(Math.random() * 6));
     }
 
-    function handleClick() {
+    function rollDice() {
         SetDice(rollNewDice)
     }
 
@@ -23,7 +23,7 @@ const Game = () => {
             </section>
             <button 
                 className="mt-8 bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-10 rounded cursor-pointer"
-                onClick={handleClick}
+                onClick={rollDice}
             >
                 Roll
             </button>
