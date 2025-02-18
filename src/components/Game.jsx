@@ -23,12 +23,14 @@ const Game = () => {
         );
     }
 
+    const diceElements = dice.map((die, index) => (
+        <Dice value={die.value} isHeld={die.isHeld} key={index} />
+    ))
+
     return (
         <div className="flex justify-center flex-col items-center">
             <section className="grid grid-cols-5 gap-6 max-w-screen-sm">
-                {dice.map((die, index) => (
-                    <Dice value={die.value} isHeld={die.isHeld} key={index} />
-                ))}
+                {diceElements}
             </section>
             <button
                 className="mt-8 bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-10 rounded cursor-pointer"
