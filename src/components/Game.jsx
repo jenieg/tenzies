@@ -11,7 +11,7 @@ const Game = () => {
     }
 
     function rollDice() {
-        SetDice(rollNewDice)
+        SetDice(rollNewDice())
     }
 
     return (
